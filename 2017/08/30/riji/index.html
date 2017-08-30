@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>jquery对象与dom对象 | yingxincui</title>
+    <title>小议前端框架 | yingxincui</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="做高效率的自学者">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="jquery对象与dom对象 | yingxincui">
+    <meta name="twitter:title" content="小议前端框架 | yingxincui">
     <meta name="twitter:description" content="做高效率的自学者">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="jquery对象与dom对象 | yingxincui">
+    <meta property="og:title" content="小议前端框架 | yingxincui">
     <meta property="og:description" content="做高效率的自学者">
 
     
@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="yingxincui" href="/atom.xml">
     
 
-    <link rel="canonical" href="http://yoursite.com/2017/08/30/jquery/"/>
+    <link rel="canonical" href="http://yoursite.com/2017/08/30/riji/"/>
 
                  
 </head>
@@ -148,32 +148,21 @@
 
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2017-08-30T11:42:33.000Z" class="post-list__meta--date date">2017-08-30</time> &#8226; <span class="post-meta__tags tags">于 
-  <a class="tag-link" href="/tags/jquery，js/">jquery，js</a>
+      <time datetime="2017-08-30T15:22:58.000Z" class="post-list__meta--date date">2017-08-30</time> &#8226; <span class="post-meta__tags tags">于 
+  <a class="tag-link" href="/tags/前端/">前端</a>
  </span>
       <span class="page-pv">
        阅读 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
       </span> 
    
     </div>
-    <h1 class="post-title">jquery对象与dom对象</h1>
+    <h1 class="post-title">小议前端框架</h1>
   </header>
 
   <section class="post">
-    <h3 id="二者有何区别？"><a href="#二者有何区别？" class="headerlink" title="二者有何区别？"></a>二者有何区别？</h3><p>jquery对象比如<br><code>$(&quot;#test&quot;).html()</code></p>
-<p>dom对象常见用法比如<br><code>document.getElementById(&quot;id&quot;).innerHTML</code><br>通过传统js方法获取的对象就是dom对象，由jquery而来的是jquery对象。</p>
-<p>dom对象的方法jquery对象用不了，jquery对象的方法dom对象也用不了、</p>
-<h3 id="二者可以相互转换吗？"><a href="#二者可以相互转换吗？" class="headerlink" title="二者可以相互转换吗？"></a>二者可以相互转换吗？</h3><p>可以，比如jquery对象转dom对象，如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var $v =$(&quot;#v&quot;) ; //jQuery对象</div><div class="line">var v=$v[0]; //DOM对象</div><div class="line">alert(v.checked) //检测这个checkbox是否被选中</div></pre></td></tr></table></figure>
-<p>为啥第一行是$v呢？写成v不行么？可以，加个美元符号是为了让你一眼就看出那是个jquery对象。你把美元符号+v看成一个整体就好了。<br>之后第二行，由于jquery对象事实上可以看成一个数组，因为id=v可能有很多个。然后数组中的每一个就可以视为dom对象了。</p>
-<p>方法二</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var $v=$(&quot;#v&quot;); //jQuery对象</div><div class="line"> </div><div class="line">var v=$v.get(0); //DOM对象</div><div class="line"> </div><div class="line">alert(v.checked) //检测这个checkbox是否被选中</div></pre></td></tr></table></figure>
-<p>第一步是一样的，第二步利用了get方法，get的参数就是index。不如第一种方法简便。</p>
-<h3 id="dom对象可以转jquery对象么？"><a href="#dom对象可以转jquery对象么？" class="headerlink" title="dom对象可以转jquery对象么？"></a>dom对象可以转jquery对象么？</h3><p>可以，这个更简单，用$()符号把dom对象包起来就行。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var cr=document.getElementById(&quot;cr&quot;); //dom对象</div><div class="line">var $cr = $(cr); //转换成jquery对象</div></pre></td></tr></table></figure>
-<p>第一步获取dom对象，<br>第二步用美元符号包装。<br>更简单了。</p>
-<h3 id="为什么要转换？"><a href="#为什么要转换？" class="headerlink" title="为什么要转换？"></a>为什么要转换？</h3><p>因为有些方法是dom对象独有的，或者是jquery对象独有的</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.cnblogs.com/ss8023/p/5697862.html" target="_blank" rel="external">JQuery对象与DOM对象的区别与转换 - 郝庆玺 - 博客园</a></p>
+    <h1 id="我不是一个随性的人"><a href="#我不是一个随性的人" class="headerlink" title="我不是一个随性的人"></a>我不是一个随性的人</h1><blockquote>
+<p>所以你是吗？<br> cd /Users/libai/myblog<br> hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
+</blockquote>
 
   </section>
 
@@ -182,24 +171,30 @@
 <section class="read-more">
            
     
+        
+        
                
             <div class="read-more-item">
-                <span class="read-more-item-dim">最近的文章</span>
-                <h2 class="post-list__post-title post-title"><a href="/2017/08/30/box/" title="小议前端框架">小议前端框架</a></h2>
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2017/08/30/dushu/" title="这样读书就够了">这样读书就够了</a></h2>
                 <p class="excerpt">
                 
-                作为一个才学了一个月前端的人，很容易陷入迷茫。前端是个坑啊，这要学的东西也太多了！
-为什么前端框架层出不穷？个人看法：js给的工具太原始了。好比做饭要从种小麦做起。（当然设计的也很挫）
-于是框架来了，首先是jquery。jquery没有啥思想上的革新，仅仅是把js的工具提高了一个档次。js一大槽点函
+                详细总结可以看这里这样读书就够了 - 简书
+本书主要观点
+先让我们看看读书和培训有什么区别
+
+图书=核心知识+书面表达
+培训=核心知识+口头表达+I
+培训=图书+I
+这个I的价值等于培训和一本书的差价，如果我们自己提取出了I，这样我们就完全可以通过深度学习一本书达到一场高额培训的效果。
+这个I是什么
                 &hellip;
                 </p>
                 <div class="post-list__meta"><time datetime="2017-08-30T11:42:33.000Z" class="post-list__meta--date date">2017-08-30</time> &#8226; <span class="post-list__meta--tags tags">于 
-  <a class="tag-link" href="/tags/前端/">前端</a>
-</span><a class="btn-border-small" href="/2017/08/30/box/">继续阅读</a></div>
-                           
+  <a class="tag-link" href="/tags/读书，书评/">读书，书评</a>
+</span><a class="btn-border-small" href="/2017/08/30/dushu/">继续阅读</a></div>
+                       
             </div>
-        
-        
         
      
    
